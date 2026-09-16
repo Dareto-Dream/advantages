@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80bf18ac280de5d4eaf2132fb4ed3005, type: 3}
+  m_Name: WPN_TwinVipers
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponDefinition
+  displayName: Twin Vipers
+  preferredRole: 0
+  damage: 11
+  headshotMultiplier: 1.6
+  limbMultiplier: 0.85
+  range: 55
+  falloffAtMaxRange: 0.45
+  falloffStart: 12
+  pelletsPerShot: 1
+  roundsPerMinute: 1080
+  automatic: 1
+  magazineSize: 40
+  reserveAmmo: 200
+  reloadSeconds: 1.9
+  infiniteAmmo: 0
+  healPerHit: 0
+  hipSpreadDegrees: 3
+  adsSpreadDegrees: 1.4
+  spreadPerShot: 0.34
+  maxBloom: 4.2
+  bloomRecovery: 9
+  airborneSpreadMultiplier: 2.4
+  recoilUp: 0.3
+  recoilSide: 0.28
+  recoilRecovery: 11
+  adsFieldOfView: 58
+  adsSeconds: 0.09
+  adsMoveSpeedMultiplier: 0.7
+  crosshairStyle: 0
+  crosshairBaseGap: 5
+  crosshairSpreadScale: 24
+  crosshairShowDot: 0
+  crosshairColor: {r: 1, g: 0.92, b: 0.6, a: 1}
+  optic: 1
+  impactForce: 8
+  screenShake: 0.35
+  tracerColor: {r: 0.7, g: 0.95, b: 1, a: 1}

@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80bf18ac280de5d4eaf2132fb4ed3005, type: 3}
+  m_Name: WPN_IronKnuckles
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponDefinition
+  displayName: Iron Knuckles
+  preferredRole: 2
+  damage: 25
+  headshotMultiplier: 1
+  limbMultiplier: 1
+  range: 4
+  falloffAtMaxRange: 1
+  falloffStart: 4
+  pelletsPerShot: 1
+  roundsPerMinute: 70
+  automatic: 0
+  magazineSize: 1
+  reserveAmmo: 999
+  reloadSeconds: 1
+  infiniteAmmo: 0
+  healPerHit: 0
+  hipSpreadDegrees: 0
+  adsSpreadDegrees: 0
+  spreadPerShot: 0
+  maxBloom: 0
+  bloomRecovery: 1
+  airborneSpreadMultiplier: 2.4
+  recoilUp: 1.2
+  recoilSide: 0.4
+  recoilRecovery: 10
+  adsFieldOfView: 65
+  adsSeconds: 0.12
+  adsMoveSpeedMultiplier: 0.85
+  crosshairStyle: 1
+  crosshairBaseGap: 0
+  crosshairSpreadScale: 0
+  crosshairShowDot: 1
+  crosshairColor: {r: 0.95, g: 0.7, b: 0.5, a: 1}
+  optic: 0
+  impactForce: 20
+  screenShake: 0.35
+  tracerColor: {r: 1, g: 0.6, b: 0.35, a: 1}

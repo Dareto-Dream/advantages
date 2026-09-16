@@ -1,0 +1,116 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: advantage
+      POSTGRES_USER: advantage
+      POSTGRES_PASSWORD: dev-password-insecure
+      POSTGRES_INITDB_ARGS: "--encoding=UTF8"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U advantage"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  relay-us-east:
+    build:
+      context: ./Server/services/relay
+      dockerfile: Dockerfile
+    environment:
+      PORT: 8081
+      REGION: us-east
+      INTERNAL_SECRET: dev-insecure-internal-secret
+      GATEWAY_URL: http://gateway:8080
+    ports:
+      - "8081:8081"
+    depends_on:
+      gateway:
+        condition: service_healthy
+    networks:
+      - default
+
+  relay-us-west:
+    build:
+      context: ./Server/services/relay
+      dockerfile: Dockerfile
+    environment:
+      PORT: 8082
+      REGION: us-west
+      INTERNAL_SECRET: dev-insecure-internal-secret
+      GATEWAY_URL: http://gateway:8080
+    ports:
+      - "8082:8082"
+    depends_on:
+      gateway:
+        condition: service_healthy
+    networks:
+      - default
+
+  gateway:
+    build:
+      context: ./Server/services/gateway
+      dockerfile: Dockerfile
+    environment:
+      PORT: 8080
+      DATABASE_URL: postgres://advantage:dev-password-insecure@postgres:5432/advantage
+      REDIS_URL: redis://redis:6379/0
+      JWT_SECRET: dev-insecure-player-secret
+      INTERNAL_SECRET: dev-insecure-internal-secret
+      LOG_LEVEL: debug
+      RELAY_URL_US_EAST: ws://relay-us-east:8081
+      RELAY_URL_US_WEST: ws://relay-us-west:8082
+      MATCH_TEAM_SIZE: 2
+    ports:
+      - "8080:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:8080/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Unity game server container
+  game-server-us-east:
+    build:
+      context: ./Build/Server/linux
+      dockerfile: Dockerfile
+    environment:
+      ADVANTAGE_SERVER: 1
+      ADVANTAGE_GATEWAY_URL: http://gateway:8080
+      SERVER_ID: local-us-east-1
+      REGION: us-east
+      INTERNAL_SECRET: dev-insecure-internal-secret
+      LOG_FILE: /dev/stdout
+    depends_on:
+      gateway:
+        condition: service_healthy
+    restart: unless-stopped
+    networks:
+      - default
+
+volumes:
+  postgres_data:
+
+networks:
+  default:
+    name: advantage-local

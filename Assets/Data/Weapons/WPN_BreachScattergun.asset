@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80bf18ac280de5d4eaf2132fb4ed3005, type: 3}
+  m_Name: WPN_BreachScattergun
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponDefinition
+  displayName: Breach Scattergun
+  preferredRole: 2
+  damage: 9
+  headshotMultiplier: 1.5
+  limbMultiplier: 0.85
+  range: 30
+  falloffAtMaxRange: 0.2
+  falloffStart: 6
+  pelletsPerShot: 10
+  roundsPerMinute: 78
+  automatic: 0
+  magazineSize: 6
+  reserveAmmo: 42
+  reloadSeconds: 3.1
+  infiniteAmmo: 0
+  healPerHit: 0
+  hipSpreadDegrees: 4.8
+  adsSpreadDegrees: 3.4
+  spreadPerShot: 0.2
+  maxBloom: 1.6
+  bloomRecovery: 5
+  airborneSpreadMultiplier: 2.4
+  recoilUp: 2.6
+  recoilSide: 0.5
+  recoilRecovery: 7
+  adsFieldOfView: 62
+  adsSeconds: 0.16
+  adsMoveSpeedMultiplier: 0.6
+  crosshairStyle: 0
+  crosshairBaseGap: 20
+  crosshairSpreadScale: 10
+  crosshairShowDot: 0
+  crosshairColor: {r: 0.95, g: 0.7, b: 0.5, a: 1}
+  optic: 0
+  impactForce: 22
+  screenShake: 0.35
+  tracerColor: {r: 1, g: 0.55, b: 0.3, a: 1}

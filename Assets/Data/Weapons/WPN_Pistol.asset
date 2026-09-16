@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80bf18ac280de5d4eaf2132fb4ed3005, type: 3}
+  m_Name: WPN_Pistol
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponDefinition
+  displayName: Sidearm
+  preferredRole: 1
+  damage: 18
+  headshotMultiplier: 2.2
+  limbMultiplier: 0.85
+  range: 60
+  falloffAtMaxRange: 0.6
+  falloffStart: 20
+  pelletsPerShot: 1
+  roundsPerMinute: 400
+  automatic: 0
+  magazineSize: 12
+  reserveAmmo: 60
+  reloadSeconds: 1.4
+  infiniteAmmo: 0
+  healPerHit: 0
+  hipSpreadDegrees: 1.8
+  adsSpreadDegrees: 0.4
+  spreadPerShot: 0.5
+  maxBloom: 3
+  bloomRecovery: 10
+  airborneSpreadMultiplier: 2.4
+  recoilUp: 0.9
+  recoilSide: 0.3
+  recoilRecovery: 9
+  adsFieldOfView: 52
+  adsSeconds: 0.11
+  adsMoveSpeedMultiplier: 0.6
+  crosshairStyle: 0
+  crosshairBaseGap: 6
+  crosshairSpreadScale: 26
+  crosshairShowDot: 0
+  crosshairColor: {r: 0.93, g: 0.95, b: 0.98, a: 1}
+  optic: 0
+  impactForce: 12
+  screenShake: 0.35
+  tracerColor: {r: 0.9, g: 0.9, b: 0.95, a: 1}

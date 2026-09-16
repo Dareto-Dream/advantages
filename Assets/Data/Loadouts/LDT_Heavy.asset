@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24637ce9929e01a419de40f3064615a1, type: 3}
+  m_Name: LDT_Heavy
+  m_EditorClassIdentifier: Assembly-CSharp::LoadoutPreset
+  role: 2
+  displayName: Heavy
+  blurb: Slow, armoured, hits hard up close. Holds a doorway on its own.
+  accentColor: {r: 1, g: 0.6, b: 0.3, a: 1}
+  weapons:
+  - {fileID: 11400000, guid: c9800cd92ae40b0489954ee7f7576b18, type: 2}
+  - {fileID: 11400000, guid: fe13c7737a56be24b9973197ebbbbc7b, type: 2}
+  overrideStats: 0
+  stats:
+    moveSpeed: 5
+    groundAcceleration: 22
+    airAcceleration: 8
+    jumpForce: 5.4
+    maxHealth: 125
+    maxArmor: 25
+    bodyScale: {x: 1.2, y: 1.05, z: 1.2}

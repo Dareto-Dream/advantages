@@ -1,0 +1,13 @@
+{
+  "displayName": "Whisper AR",
+  "fireMode": "Automatic",
+  "suppressed": true,
+  "damage": 20,
+  "headshotMultiplier": 2.0,
+  "roundsPerMinute": 640,
+  "magazineCapacity": 30,
+  "reserveAmmo": 150,
+  "reloadSeconds": 2.1,
+  "rangeMeters": 110,
+  "sight": "Reflex"
+}

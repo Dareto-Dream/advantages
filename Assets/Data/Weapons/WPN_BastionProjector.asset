@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80bf18ac280de5d4eaf2132fb4ed3005, type: 3}
+  m_Name: WPN_BastionProjector
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponDefinition
+  displayName: Bastion Projector
+  preferredRole: 1
+  damage: 24
+  headshotMultiplier: 1.7
+  limbMultiplier: 0.85
+  range: 80
+  falloffAtMaxRange: 0.55
+  falloffStart: 20
+  pelletsPerShot: 1
+  roundsPerMinute: 400
+  automatic: 1
+  magazineSize: 20
+  reserveAmmo: 100
+  reloadSeconds: 2.2
+  infiniteAmmo: 0
+  healPerHit: 0
+  hipSpreadDegrees: 2.4
+  adsSpreadDegrees: 0.8
+  spreadPerShot: 0.4
+  maxBloom: 3
+  bloomRecovery: 8
+  airborneSpreadMultiplier: 2.4
+  recoilUp: 0.45
+  recoilSide: 0.22
+  recoilRecovery: 9
+  adsFieldOfView: 52
+  adsSeconds: 0.13
+  adsMoveSpeedMultiplier: 0.6
+  crosshairStyle: 0
+  crosshairBaseGap: 8
+  crosshairSpreadScale: 18
+  crosshairShowDot: 0
+  crosshairColor: {r: 0.85, g: 0.9, b: 0.45, a: 1}
+  optic: 0
+  impactForce: 10
+  screenShake: 0.35
+  tracerColor: {r: 0.8, g: 0.9, b: 0.4, a: 1}
